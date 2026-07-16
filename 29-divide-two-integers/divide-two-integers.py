@@ -1,14 +1,16 @@
-class Solution(object):
-    def divide(self, dividend, divisor):
-        result=int(float(dividend)/divisor)
 
-        MAX = 2**31 - 1
-        MIN = -2**31
+class Solution:
+    def divide(self, dividend: int, divisor: int) -> int:
+        result = int(dividend / divisor)
 
-        if result > MAX:
-            return MAX
+        INT_MAX = 2**31 - 1
+        INT_MIN = -2**31
 
-        if result < MIN:
-            return MIN
+        if result > INT_MAX:
+            return INT_MAX
+        if result < INT_MIN:
+            return INT_MIN
 
-        return result        
+        return result
+
+        
