@@ -1,1 +1,4 @@
-select * from cinema where id%2!=0 and description not in('boring') order by rating desc
+# Write your MySQL query statement below
+select * from cinema 
+where id%2!=0 and description not in ('boring')
+order by rating desc
