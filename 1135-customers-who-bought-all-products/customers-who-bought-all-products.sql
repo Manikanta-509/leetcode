@@ -1,6 +1,4 @@
-
-select c.customer_id from customer c 
-group by c.customer_id
-having count(distinct c.product_key)=(
-    select count(*) from product 
-) 
+# Write your MySQL query statement below
+select customer_id from customer 
+group by customer_id having (count(distinct product_key)) in( 
+select distinct(count(product_key)) from product)
