@@ -1,11 +1,9 @@
 class Solution(object):
     def twoSum(self, nums, target):
-        seen={}
+        freq={}
         for i in range(len(nums)):
-            diff=target-nums[i]
-            if diff in seen:
-                return [seen[diff],i]
-            seen[nums[i]]=i
-
-
-        
+            s=target-nums[i]
+            if s in freq:
+                return [freq[s],i]
+            else:
+                freq[nums[i]]=i
