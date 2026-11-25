@@ -1,16 +1,12 @@
-class Solution(object):
-    def singleNumber(self, nums):
+class Solution:
+    def singleNumber(self, nums: list[int]) -> int:
         freq={}
         for i in nums:
             if i in freq:
                 freq[i]+=1
             else:
                 freq[i]=1
-        for val in freq:
-            if freq[val]==1:
-                return val
-        """
-        :type nums: List[int]
-        :rtype: int
-        """
+        for key,value in freq.items():
+            if value==1:
+                return key
         
